@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------------------
+# Derived Mojang artifacts: copyrighted, large, and reproducible from the tools.
+#   unsigned/<v>-unsigned.jar    -> python3 tools/unsign_jar.py
+#   notes/decompiled/**          -> bash tools/decompile_class.sh <fqcn>
+#   patched/src/net/minecraft/** -> python3 screenshare/patch_*.py (run by build.sh)
+#   patched/out/**               -> bash screenshare/build.sh
+# ---------------------------------------------------------------------------
+unsigned/
+notes/decompiled/
+patched/src/net/minecraft/
+patched/out/
+
+# The MCP-Reborn / Gradle base this work layers onto. Deliberately not part of this repo:
+# it is a separate clone, and this directory is meant to sit inside it (or beside the game
+# install with MC_ROOT set).
+build.gradle
+settings.gradle
+gradle.properties
+gradlew
+gradlew.bat
+gradle/
+.gradle/
+.github/
+MCP-License
+build/
+src/*
+
+# Downloaded on demand: bash tools/fetch_vineflower.sh
+tools/vineflower.jar
+tools/mcp_config.zip
+
+# Scratch space for decompile work
+.work/
+
+# Extracted LWJGL natives + generated classpath lists
+screenshare/natives/
+screenshare/classpath.txt
+notes/classpath.txt
+notes/classpath-unsigned.txt
+
+# Runtime state and logs
+screenshare/__pycache__/
+screenshare/*.log
+screenshare/channels.json
+screenshare/gamedir/
+logs/
+run-server/
+
+# Local-only captures (the verification shots are committed in screenshare/layouttest/)
+screenshare/preview/
+screenshare/game-window.png
+
+# Run files and IDE noise
+runclient
+run/
+out/
+.idea/
+*.iml
